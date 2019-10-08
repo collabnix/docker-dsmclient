@@ -8,6 +8,8 @@ $ xhost +$YOURIP
 
 $ docker run --rm -it -e DISPLAY=$YOURIP:0 dsmclient
 
+![My Image](https://github.com/collabnix/docker-dsmclient/blob/master/images/image1.png)
+
 If you want to retain your settings between sessions, make sure ~/.config/dell exists
 Then, change the docker command to:
 
