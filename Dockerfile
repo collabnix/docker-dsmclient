@@ -1,11 +1,12 @@
 FROM oraclelinux:7
-MAINTAINER Adam Robinson <adarobin@umflint.edu>
-RUN cd /tmp \
-    && curl -O https://downloads.dell.com/FOLDER04177002M/1/DellStorageClientLinux-16.3.1.301.zip \
-    && yum -y install libXext libXrender libXtst unzip \
-    && unzip DellStorageClientLinux-16.3.1.301.zip \
-    && yum -y install /tmp/dell-smclient-16.3.1-301.x86_64.rpm \
-    && rm dell-smclient-16.3.1-301.x86_64.rpm DellStorageClientLinux-16.3.1.301.zip \
-    && yum clean all
+MAINTAINER ajeetraina@gmail.com
+RUN cd /tmp
+RUN curl -O http://downloads.dell.com/FOLDER05399070M/1/DellEMCStorageClientLinux-18.1.20.114.zip
+RUN yum -y install libXext libXrender libXtst unzip
+RUN unzip DellEMCStorageClientLinux-18.1.20.114.zip
+RUN mv 'Storage Manager Linux Client 18.1.20.114.rpm' Storage_Manager_Linux_Client.rpm
+RUN yum install -y Storage_Manager_Linux_Client.rpm
+RUN rm DellEMCStorageClientLinux-18.1.20.114.zip
+RUN yum clean all
 
 ENTRYPOINT [ "/var/lib/dell/bin/Client" ]
