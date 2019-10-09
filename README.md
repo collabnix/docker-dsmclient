@@ -1,6 +1,6 @@
-# Docker container for Dell Storage Manager 2018 R1.20 Linux Client
+# Docker container for DellEMC Storage Manager 2018 R1.20 Linux Client
 
-If you want to run Dell Storage Manager inside Docker container, you have come to the right place.
+If you want to run DellEMC Storage Manager inside Docker container, you have come to the right place.
 
 # Pre-requisite
 
